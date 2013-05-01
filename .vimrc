@@ -26,6 +26,8 @@ set ffs=unix,dos
 " allow . to operate on each line of a visual block
 vnoremap . :normal .<CR>
 vnoremap @q :normal@q<CR>
+vnoremap <leader>4 :normal <leader>4<CR>
+vnoremap <leader>5 :normal <leader>5<CR>
 
 " Press space to clear search highlighting and any message already displayed
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
@@ -36,6 +38,12 @@ cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W')
 " for vim-LaTeX
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+
+" Jump to the last position whenreopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+  \| exe "normal! g'\"" | endif
+endif
 
 """ Leader key commands
 " Markdown headers
