@@ -35,10 +35,6 @@ nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 " allow :W to work like :w
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
-" for vim-LaTeX
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-
 " Jump to the last position whenreopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -58,4 +54,5 @@ nnoremap <leader>5 _3x$xxx
 nnoremap <leader>6 o<% %><Esc>2hi
 " Shorten a sentence from the beginning by a word
 nnoremap <leader>0 dw~b
+" Format json
 nnoremap <leader>j :%!python -m json.tool<CR>
