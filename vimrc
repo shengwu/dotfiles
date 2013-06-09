@@ -11,6 +11,9 @@ set hlsearch
 syntax on
 filetype plugin indent on
 
+" Start Pathogen
+execute pathogen#infect()
+
 " dark grey line numbers
 highlight LineNr ctermfg=DarkGrey
 
