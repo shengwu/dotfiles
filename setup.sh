@@ -6,6 +6,6 @@ for f in *
 do
   if [ "$f" != "$me" ]
   then
-    ln -sf ~/.dotfiles/$f ~/.$f
+    ln -s ~/.dotfiles/$f ~/.$f
   fi
 done

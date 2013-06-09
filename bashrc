@@ -191,9 +191,6 @@
 # 
 # alias cd=cd_func
 
-# Disable colors
-use_color=0
-
 # Configure bash prompt
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database
@@ -227,8 +224,6 @@ if ${use_color} ; then
                 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;34m\] \A \[\033[01;35m\]\W \$\[\033[00m\] '
         fi
 
-        alias ls='ls --color=auto'
-        alias grep='grep --colour=auto'
 else
         if [[ ${EUID} == 0 ]] ; then
                 # show root@ when we don't have colors
@@ -243,8 +238,8 @@ unset use_color safe_term match_lhs
 
 # Aliases
 export LS_OPTS='--color=auto'
-# alias ls='ls --color=none'
-alias ls='ls -hF --color=tty' # classify files in colour
+alias ls='ls --color=none'
+# alias ls='ls -hF --color=tty' # classify files in colour
 # alias dir='ls --color=auto --format=vertical'
 # alias vdir='ls --color=auto --format=long'
 alias ll='ls -l ${LS_OPTS}'     # long list
