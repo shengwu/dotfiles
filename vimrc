@@ -1,3 +1,4 @@
+set nocompatible
 set shiftwidth=4 softtabstop=4 tabstop=4
 set expandtab
 set number
@@ -8,6 +9,8 @@ set background=dark
 set ignorecase
 set smartcase
 set hlsearch
+set scrolloff=4
+set showcmd
 syntax on
 filetype plugin indent on
 
