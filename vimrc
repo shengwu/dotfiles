@@ -9,16 +9,23 @@ set background=dark
 set ignorecase
 set smartcase
 set hlsearch
-set scrolloff=4
+set scrolloff=5
 set showcmd
+set t_Co=256
+colorscheme grb256
 syntax on
 filetype plugin indent on
 
-" Start Pathogen
-execute pathogen#infect()
+" enable scrolling in xterm
+set mouse=a
+vnoremap <C-c> "+y<CR>
+map <C-a> ggVG
 
 " dark grey line numbers
 highlight LineNr ctermfg=DarkGrey
+
+" start editing with correct syntax highlighting
+autocmd BufEnter *.html :syntax sync fromstart
 
 " 2-space indents for HTML and ruby
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2
@@ -58,6 +65,8 @@ nnoremap <leader>4 I/* <Esc> A */<Esc>
 nnoremap <leader>5 _3x$xxx
 " eRuby block
 nnoremap <leader>6 o<% %><Esc>2hi
+" Javascript debug
+nnoremap <leader>9 oconsole.log();<Esc>hi
 " Shorten a sentence from the beginning by a word
 nnoremap <leader>0 dw~b
 " Format json
