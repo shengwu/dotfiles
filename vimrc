@@ -14,6 +14,15 @@ set showcmd
 set t_Co=256
 colorscheme grb256
 syntax on
+
+" set up vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'gregsexton/MatchTag'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mattn/emmet-vim'
 filetype plugin indent on
 
 " enable scrolling in xterm
@@ -71,3 +80,4 @@ nnoremap <leader>9 oconsole.log();<Esc>hi
 nnoremap <leader>0 dw~b
 " Format json
 nnoremap <leader>j :%!python -m json.tool<CR>
+
