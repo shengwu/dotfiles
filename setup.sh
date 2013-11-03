@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Create symlinks to all files in this directory except this script
 me=`basename $0`

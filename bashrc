@@ -275,12 +275,4 @@ export SCALA_HOME=~/scala-2.10.0
 export PATH=$PATH:$SCALA_HOME/bin
 
 # Virtualenvwrapper
-source /bin/virtualenvwrapper.sh
-
-# Golang
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOROOT/bin
-GOROOT=$(cygpath -w "$GOROOT")
-
-# Start in Desktop
-cd C:/Users/Sheng/Desktop
+source /usr/local/bin/virtualenvwrapper.sh
