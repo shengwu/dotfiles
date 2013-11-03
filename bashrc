@@ -237,8 +237,6 @@ fi
 unset use_color safe_term match_lhs
 
 # Aliases
-export LS_OPTS='--color=auto'
-#alias ls='ls --color=none'
 alias ls='ls -h --color=tty' # classify files in colour
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
@@ -247,32 +245,8 @@ alias la='ls -lA ${LS_OPTS}'    # all but . and ..
 alias gdb='gdb -q'
 alias gr='grep -riIn'
 
-# Open a file in vim and notepad++
-# TODO: fix so notepad++ doesn't have to be already open
-function vim-npp()
-{
-    'c:/Program Files (x86)/Notepad++/notepad++' "$@";
-    vim "$@";
-}
-
-# add node to path
-#export PATH=$PATH:"/cygdrive/Program Files/nodejs"
-
-# Add Chrome and Firefox to path for Selenium
-export PATH=$PATH:"/cygdrive/c/Program Files (x86)/Google/Chrome/Application/:/cygdrive/c/Program Files(x86)/Mozilla Firefox/"
-
-# Include extra aliases
-#source "${HOME}/.bash_aliases"
-
 # 256-color terminal
 export TERM=xterm-256color
-
-# Export DATABASE_URL for speakeasy Django configuration
-export DATABASE_URL='postgres://speakeasy:insecure@localhost/speakeasy'
-
-# Stuff for Scala
-export SCALA_HOME=~/scala-2.10.0
-export PATH=$PATH:$SCALA_HOME/bin
 
 # Virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
