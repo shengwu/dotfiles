@@ -1,13 +1,12 @@
-# README
+# Sheng's dotfiles
 
-Set up if you're me:
+To set things up on a new machine:
 
     git clone git@github.com:shengwu/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     ./setup.sh
+    git submodule init
+    git submodule update
 
-If you're not me:
-    
-    git clone git://github.com/shengwu/dotfiles.git ~/.dotfiles
-    cd ~/.dotfiles
-    ./setup.sh
+Then, start vim and run `:BundleInstall`.
+
