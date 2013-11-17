@@ -45,6 +45,9 @@ autocmd FileType eruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
 " unix line endings for a Windows environment
 set ffs=unix,dos
 
+" disable Ex mode
+map Q <Nop>
+
 " allow . to operate on each line of a visual block
 vnoremap . :normal .<CR>
 vnoremap @q :normal@q<CR>
