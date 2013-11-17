@@ -258,8 +258,11 @@ function vim-npp()
 # add node to path
 #export PATH=$PATH:"/cygdrive/Program Files/nodejs"
 
+# Add npm packages to path
+export PATH=$PATH:/cygdrive/c/Users/Sheng/AppData/Roaming/npm
+
 # Add Chrome and Firefox to path for Selenium
-export PATH=$PATH:"/cygdrive/c/Program Files (x86)/Google/Chrome/Application/:/cygdrive/c/Program Files(x86)/Mozilla Firefox/"
+export PATH=$PATH:"/cygdrive/c/Program Files (x86)/Google/Chrome/Application/:/cygdrive/c/Program Files (x86)/Mozilla Firefox/"
 
 # Include extra aliases
 #source "${HOME}/.bash_aliases"
@@ -276,6 +279,10 @@ export PATH=$PATH:$SCALA_HOME/bin
 
 # Virtualenvwrapper
 source /bin/virtualenvwrapper.sh
+
+# Set name, email for django project builder
+export ADMIN_NAME="Sheng Wu"
+export ADMIN_EMAIL="pkernoobie@gmail.com"
 
 # Golang
 export GOROOT=$HOME/go
