@@ -1,6 +1,6 @@
 [user]
-	name = Sheng Wu
-	email = pkernoobie@gmail.com
+    name = Sheng Wu
+    email = pkernoobie@gmail.com
 
 [alias]
     pullom = pull origin master
@@ -20,3 +20,5 @@
     co = checkout
     br = branch
 
+[push]
+    default = simple

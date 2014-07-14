@@ -66,6 +66,12 @@ if has("autocmd")
   \| exe "normal! g'\"" | endif
 endif
 
+" Write read-only files with :sudow
+cnoremap sudow w !sudo tee % >/dev/null
+
+" Shortcut to strip trailing whitespace
+nnoremap <leader>r :%s/\s\+$//e<CR>
+
 """ Leader key commands
 " Markdown headers
 nnoremap <leader>1 yypVr=
