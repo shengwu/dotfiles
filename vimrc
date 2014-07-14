@@ -75,8 +75,8 @@ nnoremap <leader>3 YPVr*0r/$r/Yjp
 " Wrap/unwrap a C-style comment
 nnoremap <leader>4 I/* <Esc> A */<Esc>
 nnoremap <leader>5 _3x$xxx
-" eRuby block
-nnoremap <leader>6 o<% %><Esc>2hi
+" django template block
+nnoremap <leader>6 I{% <Esc> A %}<Esc>
 " Javascript debug
 nnoremap <leader>9 oconsole.log();<Esc>hi
 " Shorten a sentence from the beginning by a word
