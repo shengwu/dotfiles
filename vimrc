@@ -1,5 +1,5 @@
 set nocompatible
-set shiftwidth=4 softtabstop=4 tabstop=4
+set shiftwidth=2 softtabstop=2 tabstop=2
 set expandtab
 set number
 set ruler
@@ -35,12 +35,6 @@ highlight LineNr ctermfg=DarkGrey
 
 " start editing with correct syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
-
-" 2-space indents for HTML and ruby
-autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 softtabstop=2 tabstop=2
-autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
-autocmd FileType eruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
 " unix line endings for a Windows environment
 set ffs=unix,dos
