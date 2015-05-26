@@ -1,5 +1,5 @@
 set nocompatible
-set shiftwidth=4 softtabstop=4 tabstop=4
+set shiftwidth=2 softtabstop=2 tabstop=2
 set expandtab
 set number
 set ruler
@@ -11,18 +11,22 @@ set smartcase
 set hlsearch
 set scrolloff=5
 set showcmd
+set clipboard=unnamed
 set t_Co=256
 colorscheme grb256
 syntax on
 
 " set up vundle
 filetype off
+set rtp+=$GOROOT/misc/vim
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'gregsexton/MatchTag'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'munshkr/vim-tidal'
 filetype plugin indent on
 
 " enable scrolling in xterm
@@ -75,12 +79,13 @@ nnoremap <leader>3 YPVr*0r/$r/Yjp
 " Wrap/unwrap a C-style comment
 nnoremap <leader>4 I/* <Esc> A */<Esc>
 nnoremap <leader>5 _3x$xxx
-" eRuby block
-nnoremap <leader>6 o<% %><Esc>2hi
+" Django template block
+nnoremap <leader>6 I{% <Esc> A %}<Esc>
 " Javascript debug
 nnoremap <leader>9 oconsole.log();<Esc>hi
 " Shorten a sentence from the beginning by a word
 nnoremap <leader>0 dw~b
 " Format json
 nnoremap <leader>j :%!python -m json.tool<CR>
-
+" Start new code contest file
+nnoremap <leader>c ifor i in range(input()):<CR>
