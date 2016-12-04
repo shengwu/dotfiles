@@ -17,12 +17,14 @@ syntax on
 
 " set up vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'gregsexton/MatchTag'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/emmet-vim'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'gmarik/vundle'
+Plugin 'gregsexton/MatchTag'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+call vundle#end()
 filetype plugin indent on
 
 " enable scrolling in xterm
@@ -64,7 +66,7 @@ endif
 cnoremap sudow w !sudo tee % >/dev/null
 
 " Shortcut to strip trailing whitespace
-nnoremap <leader>r :%s/\s\+$//e<CR>
+nnoremap <leader>s :%s/\s\+$//e<CR>
 
 """ Leader key commands
 " Markdown headers
@@ -83,4 +85,3 @@ nnoremap <leader>9 oconsole.log();<Esc>hi
 nnoremap <leader>0 dw~b
 " Format json
 nnoremap <leader>j :%!python -m json.tool<CR>
-
