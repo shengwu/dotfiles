@@ -12,7 +12,6 @@ set hlsearch
 set scrolloff=5
 set showcmd
 set t_Co=256
-colorscheme grb256
 syntax on
 
 " set up vundle
@@ -24,7 +23,10 @@ Plugin 'gmarik/vundle'
 Plugin 'gregsexton/MatchTag'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'quanganhdo/grb256'
 call vundle#end()
+
+colorscheme grb256
 filetype plugin indent on
 
 " enable scrolling in xterm
