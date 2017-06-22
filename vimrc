@@ -40,6 +40,9 @@ highlight LineNr ctermfg=DarkGrey
 " start editing with correct syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
 
+" yank to and put from system clipboard
+set clipboard=unnamedplus
+
 " unix line endings for a Windows environment
 set ffs=unix,dos
 
