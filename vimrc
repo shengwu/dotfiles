@@ -41,7 +41,7 @@ highlight LineNr ctermfg=DarkGrey
 autocmd BufEnter *.html :syntax sync fromstart
 
 " yank to and put from system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " unix line endings for a Windows environment
 set ffs=unix,dos
