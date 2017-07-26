@@ -24,10 +24,15 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'quanganhdo/grb256'
+Plugin 'elixir-lang/vim-elixir'
 call vundle#end()
 
 colorscheme grb256
 filetype plugin indent on
+
+" don't search these directories with ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|_build'
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " enable scrolling in xterm
 set mouse=a
