@@ -11,6 +11,7 @@ set smartcase
 set hlsearch
 set scrolloff=5
 set showcmd
+set undofile
 set t_Co=256
 syntax on
 
