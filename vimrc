@@ -96,3 +96,11 @@ nnoremap <leader>9 oconsole.log();<Esc>hi
 nnoremap <leader>0 dw~b
 " Format json
 nnoremap <leader>j :%!python -m json.tool<CR>
+
+" NEOVIM
+" disable statusline by default
+set ls=1
+" ctrl-C to copy
+set clipboard+=unnamedplus
+" use block cursor in insert mode too
+set guicursor=
