@@ -27,6 +27,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'quanganhdo/grb256'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'ianks/vim-tsx'
+Plugin 'fatih/vim-go'
 call vundle#end()
 
 colorscheme grb256
