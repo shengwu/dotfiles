@@ -88,12 +88,5 @@ source $ZSH/oh-my-zsh.sh
 # Don't confirm commands like "sudo !!"
 unsetopt histverify
 
-# appengine
-export PATH=$PATH:~/appengine/
-
 # vim for the win
 export EDITOR=vim
-
-# go
-export GOPATH=~/go
-export PATH=$PATH:~/go/bin
